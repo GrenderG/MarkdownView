@@ -3,6 +3,10 @@
 
 WebView implementation supporting Markdown rendering.
 
+<div align="center">
+	<img src="https://raw.githubusercontent.com/GrenderG/MarkdownView/master/art/demo.gif">
+</div>
+
 ## Prerequisites
 
 Add this in your root `build.gradle` file (**not** your module `build.gradle` file):
