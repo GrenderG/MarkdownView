@@ -23,6 +23,6 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.GrenderG:MarkdownView:1.3.0'
+	implementation 'com.github.GrenderG:MarkdownView:0.1.0'
 }
 ```
