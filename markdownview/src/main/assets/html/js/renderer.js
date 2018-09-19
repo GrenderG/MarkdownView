@@ -87,7 +87,7 @@ $(function() {
         return text;
     }
 
-    render = function setMarkdown(md_text, code_scroll_enabled, base_css, code_highlight_css) {
+    render = function setMarkdown(md_text, code_scroll_enabled, base_css, code_highlight_css, margin) {
         if (md_text == "") {
             return false;
         }
@@ -108,6 +108,7 @@ $(function() {
 
         $('link[href*="_dummy_css_1_"]').replaceWith('<link href="' + base_css + '" type="text/css" rel="stylesheet">');
         $('link[href*="_dummy_css_2_"]').replaceWith('<link href="' + code_highlight_css + '" type="text/css" rel="stylesheet">');
+        $('body').css("margin", margin)
 
         $('#container_body').html(md_html);
 

@@ -182,14 +182,16 @@ public class MarkdownView extends WebView {
         }
     }
 
+    @SuppressLint("DefaultLocale")
     private void renderMarkdown() {
         String cleanMarkdownText = imgToBase64(markdownText);
         cleanMarkdownText = escapeText(cleanMarkdownText);
 
         if (Build.VERSION.SDK_INT < Build.VERSION_CODES.KITKAT) {
-            loadUrl(String.format("javascript:render('%s', %b, '%s', '%s')", cleanMarkdownText, isCodeScrollEnabled(),
+            loadUrl(String.format("javascript:render('%s', %b, '%s', '%s', %d)", cleanMarkdownText, isCodeScrollEnabled(),
                     currentConfig.getCssMarkdown(),
-                    currentConfig.getCssCodeHighlight()));
+                    currentConfig.getCssCodeHighlight(),
+                    currentConfig.getDefaultMargin()));
             new Handler().postDelayed(new Runnable() {
                 @Override
                 public void run() {
@@ -203,8 +205,9 @@ public class MarkdownView extends WebView {
                 }
             }, calculateRenderDelay());
         } else {
-            evaluateJavascript(String.format("render('%s', %b, '%s', '%s')", cleanMarkdownText, isCodeScrollEnabled(),
-                    currentConfig.getCssMarkdown(), currentConfig.getCssCodeHighlight()), new ValueCallback<String>() {
+            evaluateJavascript(String.format("render('%s', %b, '%s', '%s', %d)", cleanMarkdownText, isCodeScrollEnabled(),
+                    currentConfig.getCssMarkdown(), currentConfig.getCssCodeHighlight(), currentConfig.getDefaultMargin()),
+                    new ValueCallback<String>() {
 
                 @Override
                 public void onReceiveValue(final String string) {

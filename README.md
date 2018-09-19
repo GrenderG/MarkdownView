@@ -27,7 +27,7 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.GrenderG:MarkdownView:0.1.1'
+	implementation 'com.github.GrenderG:MarkdownView:0.1.2'
 }
 ```
 
@@ -89,6 +89,17 @@ defaultConfig.setDefaultOkHttpClient(new OkHttpClient().newBuilder().addIntercep
             }
         }
 ).build());
+
+markdownView.setCurrentConfig(defaultConfig);
+```
+
+You can also set the margins of the content (in px):
+```java
+Config defaultConfig = Config.getDefaultConfig();
+        
+defaultConfig.setDefaultMargin(16);
+
+markdownView.setCurrentConfig(defaultConfig);
 ```
 
 There's also a rendering listener which will provide you info if there's an error rendering the Markdown and when it has finished rendering (near perfect timing).

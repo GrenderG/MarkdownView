@@ -5,20 +5,29 @@ import okhttp3.OkHttpClient;
 public class Config {
     private String cssMarkdown;
     private String cssCodeHighlight;
+    private int defaultMargin;
     private OkHttpClient defaultOkHttpClient;
 
     public Config() {
         // empty constructor
     }
 
+    public Config(String cssMarkdown, String cssCodeHighlight, OkHttpClient okHttpClient, int defaultMargin) {
+        this.cssMarkdown = cssMarkdown;
+        this.cssCodeHighlight = cssCodeHighlight;
+        this.defaultOkHttpClient = okHttpClient;
+        this.defaultMargin = defaultMargin;
+    }
+
     public Config(String cssMarkdown, String cssCodeHighlight, OkHttpClient okHttpClient) {
         this.cssMarkdown = cssMarkdown;
         this.cssCodeHighlight = cssCodeHighlight;
         this.defaultOkHttpClient = okHttpClient;
+        this.defaultMargin = 0;
     }
 
     public Config(String cssMarkdown, String cssCodeHighlight) {
-        this(cssMarkdown, cssCodeHighlight, new OkHttpClient());
+        this(cssMarkdown, cssCodeHighlight, new OkHttpClient(), 0);
     }
 
     public static Config getDefaultConfig() {
@@ -50,6 +59,14 @@ public class Config {
 
     public void setDefaultOkHttpClient(OkHttpClient defaultOkHttpClient) {
         this.defaultOkHttpClient = defaultOkHttpClient;
+    }
+
+    public int getDefaultMargin() {
+        return defaultMargin;
+    }
+
+    public void setDefaultMargin(int defaultMargin) {
+        this.defaultMargin = defaultMargin;
     }
 
     public static class CssMarkdown {
