@@ -27,11 +27,14 @@ Add this to your module's `build.gradle` file (make sure the version matches the
 ```gradle
 dependencies {
 	...
-	implementation 'com.github.GrenderG:MarkdownView:0.1.0'
+	implementation 'com.github.GrenderG:MarkdownView:0.1.1'
 }
 ```
 
 ## Basic usage
+
+**NOTE:** You will need to specify INTERNET permission in your project if you want to load Internet resources.
+
 
 First of all, all the View where you want:
 ```xml
@@ -105,7 +108,7 @@ markdownView.setOnMarkdownRenderingListener(new MarkdownView.OnMarkdownRendering
 
 ## Acknowledgements
 
-This library is **heavily** inspired by [MarkedView-for-Android
+This library is **heavily** influenced by [MarkedView-for-Android
 ](https://github.com/mittsuu/MarkedView-for-Android) from [@mittsuu](https://github.com/mittsuu).
 
 - [Marked](https://github.com/markedjs/marked)
