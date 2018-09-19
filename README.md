@@ -70,7 +70,7 @@ MarkdownView uses `css` files to stylize everything, you can customize them too:
 ```java
 markdownView.setCurrentConfig(new Config(
 	"file:///android_asset/custom_css_file.css",
-	Config.CssCodeHighlight.MONOKAI_SUBLIME // This can be a custom one too, but there's already added some options.
+	Config.CssCodeHighlight.MONOKAI_SUBLIME // This can be a custom one too, but there are already added some options.
 ));
 ```
 
