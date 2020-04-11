@@ -1,5 +1,7 @@
+[![ko-fi](https://www.ko-fi.com/img/githubbutton_sm.svg)](https://ko-fi.com/R6R21LO82)
+
 # MarkdownView
-[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![](https://jitpack.io/v/GrenderG/MarkdownView.svg)](https://jitpack.io/#GrenderG/MarkdownView) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-MarkdownView-green.svg?style=flat )]( https://android-arsenal.com/details/1/7145 ) [![Donate](https://img.shields.io/badge/Donate-PayPal-green.svg)](https://www.paypal.me/grenderg)
+[![API](https://img.shields.io/badge/API-15%2B-brightgreen.svg?style=flat)](https://android-arsenal.com/api?level=15) [![](https://jitpack.io/v/GrenderG/MarkdownView.svg)](https://jitpack.io/#GrenderG/MarkdownView) [![Android Arsenal]( https://img.shields.io/badge/Android%20Arsenal-MarkdownView-green.svg?style=flat )]( https://android-arsenal.com/details/1/7145 )
 
 WebView implementation supporting Markdown rendering.
 
